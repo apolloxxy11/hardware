@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Tech - TI</title>
+
+    <link rel="stylesheet" href="hard.css">
+
+    <style>
+        /* Estilo do corpo */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            background-color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px;
+            color: #ffffff;
+        }
+
+        /* Wrapper do carrossel */
+        .carousel-wrapper {
+            position: relative;
+            max-width: 900px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Track do carrossel */
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Slides do carrossel */
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* Legenda do slide */
+        .carousel-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        /* Botões de navegação */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(0,0,0,0.9);
+        }
+
+        .prev {
+            left: 15px;
+        }
+
+        .next {
+            right: 15px;
+        }
+
+        /* Indicadores */
+        .carousel-indicators {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .carousel-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            background: #bbb;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .carousel-dot.active {
+            background: #717171;
+        }
+
+        /* Barra de progresso */
+        .carousel-progress-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #ddd;
+        }
+
+        .carousel-progress {
+            width: 0%;
+            height: 100%;
+            background: #25D366;
+        }
+
+        .carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-caption {
+    position: static;
+    background: #fff;
+    color: #333;
+    text-align: center;
+    padding: 15px;
+}
+
+.carousel-caption h3 {
+    margin: 0 0 8px 0;
+    font-size: 22px;
+}
+
+.carousel-caption p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.9);
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+    </style>
+
+</head>
+<body>
+
+    <h1>🌐 Galeria da Master Tech 🌐</h1>
+
+    <div class="carousel-wrapper">
+        <!-- Barra de progresso -->
+        <div class="carousel-progress-container">
+            <div class="carousel-progress" id="progress"></div>
+        </div>
+        
+        <!-- Imagens do carrossel -->
+        <div class="carousel-track" id="track">
+            <div class="carousel-slide">
+                <img src="WhatsApp Image 2026-06-16 at 21.04.23.jpeg" alt="Programação">
+                <div class="carousel-caption">
+                    <h3>💻 Placa-Mãe/Series S</h3>
+                    <p>Aprenda a fazer Manutenções em video-games!</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="WhatsApp Image 2026-06-16 at 21.05.45.jpeg" alt="Desenvolvimento Web">
+                <div class="carousel-caption">
+                    <h3>💻 Placa-Mãe/Notebook</h3>
+                    <p>Aprenda a fazer Manutenções em notebooks.</p>
+
+                    
+                </div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="murilin.jpeg" alt="Tecnologia">
+                <div class="carousel-caption">
+                    <h3>⚡ Soldagens</h3>
+                    <p>Aprenda a fazer Soldagens em periféricos.</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="WhatsApp Image 2026-06-16 at 21.05.46.jpeg" alt="Segurança">
+                <div class="carousel-caption">
+                    <h3>🌐 Manutenções em Video-games!</h3>
+                    <p>Aprenda a fazer Manutenções em video-games!</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="photo-1550751827-4bd374c3f58b.jfif" alt="Redes">
+                <div class="carousel-caption">
+                    <h3>⚡ Redes e Infraestrutura</h3>
+                    <p>Configure e mantenha redes de computadores.</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="photo-1531297484001-80022131f5a1.jfif" alt="IA">
+                <div class="carousel-caption">
+                    <h3>🤖 Inteligência Artificial</h3>
+                    <p>Descubra o futuro da computação inteligente.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botões de navegação -->
+        <button class="carousel-btn prev" id="prevBtn">❮</button>
+        <button class="carousel-btn next" id="nextBtn">❯</button>
+        
+        <!-- Indicadores -->
+        <div class="carousel-indicators" id="indicators"></div>
+    </div>
+
+    <script>
+        // Elementos do DOM
+        const track = document.getElementById('track');
+        const slides = track.querySelectorAll('.carousel-slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicators = document.getElementById('indicators');
+        const progress = document.getElementById('progress');
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        let autoPlayInterval;
+
+        // Criar indicadores dinamicamente
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('carousel-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dot.addEventListener('mouseenter', () => pauseAutoPlay());
+            dot.addEventListener('mouseleave', () => startAutoPlay());
+            indicators.appendChild(dot);
+        });
+
+        const dots = indicators.querySelectorAll('.carousel-dot');
+
+        // Função para ir para um slide específico
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+
+        // Atualizar o carrossel
+        function updateCarousel() {
+            // Mover o track
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // Atualizar indicadores
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+
+            // Atualizar barra de progresso
+            const progressWidth = ((currentIndex + 1) / totalSlides) * 100;
+            progress.style.width = `${progressWidth}%`;
+        }
+
+        // Próximo slide
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        // Slide anterior
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        // Auto play
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, 4000);
+        }
+
+        function pauseAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        // Event listeners dos botões
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            pauseAutoPlay();
+            startAutoPlay();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            pauseAutoPlay();
+            startAutoPlay();
+        });
+
+        // Pausar ao passar o mouse
+        track.addEventListener('mouseenter', pauseAutoPlay);
+        track.addEventListener('mouseleave', startAutoPlay);
+
+        // Botões do teclado
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        // Iniciar auto play
+        startAutoPlay();
+        
+        // Inicializar barra de progresso
+        progress.style.width = `${(1 / totalSlides) * 100}%`;
+    </script>
+
+</body>
+</html>
